@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.fillah.massiveaha.R
 import com.fillah.massiveaha.databinding.ActivityLoginBinding
+import com.fillah.massiveaha.two.HomeAct
 
 class LoginAct : AppCompatActivity() {
 
@@ -18,6 +19,12 @@ class LoginAct : AppCompatActivity() {
         binding.btnDaftar.setOnClickListener {
             val intent = Intent(this, DaftarAct::class.java)
             startActivity(intent)
+        }
+
+        binding.btnLogin.setOnClickListener {
+            val intent = Intent(this, HomeAct::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

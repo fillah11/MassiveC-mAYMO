@@ -77,7 +77,7 @@
         </activity>
         <activity
             android:name=".one.LoginAct"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:theme="@style/Theme.MassiveAha.NoActionBar"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -92,6 +92,7 @@
         </activity>
         <activity
             android:name=".one.TipsAct"
+            android:theme="@style/Theme.MassiveAha.NoActionBar"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -106,7 +107,7 @@
         </activity>
         <activity
             android:name=".one.DaftarAct"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:theme="@style/Theme.MassiveAha.NoActionBar"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -114,7 +115,7 @@
         </activity>
         <activity
             android:name=".one.SplashScreen"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:theme="@style/Theme.MassiveAha.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

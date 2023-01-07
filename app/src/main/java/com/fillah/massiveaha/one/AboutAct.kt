@@ -7,6 +7,6 @@ import com.fillah.massiveaha.R
 class AboutAct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_daftar)
+        setContentView(R.layout.activity_about)
     }
 }
