@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Massive Aha</string>
+    <string name="hint_username">Masukkan username</string>
+    <string name="hint_password">Masukkan password</string>
+    <string name="hint_email">Masukkan email</string>
+    <string name="hint_confirm_password">Konfirmasi password</string>
+    <string name="checkbox_register">Saya telah mengisi data dengan benar</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_google">Google</string>
+    <string name="btn_daftar">Daftar</string>
+    <string name="tv_no_account">Tidak memiliki akun?</string>
+    <string name="tv_other_login">Atau login dengan</string>
+    <string name="tv_tips_header">Tips mengelola keuangan!</string>
+    <string name="tv_tips">Berdasarkan penghasilan anda, anda harus mengaplikasikan 50:30:20 rule.</string>
+    <string name="tv_tips_1">50% (RpXX.XXX,00) digunakan untuk membayar tagihan bulanan dan kebutuhan pokok. Misalnya seperti listrik, belanja bulanan, cicilan, serta biaya transportasi.</string>
+    <string name="tv_tips_2">30% (RpXX.XXX,00) sebagai dana fleksibel. Sehingga barang yang anda inginkan tetapi tidak esensial dapat dibeli dengan budget ini. Contohnya Anda bisa menggunakan dana fleksibel untuk membeli baju, menonton bioskop, atau bepergian.</string>
+    <string name="tv_tips_3">20% (RpXX.XXX,00) dialokasikan untuk mencapai tujuan finansial Anda yaitu investasi, tabungan, dan asuransi. Sehingga Anda memiliki dana yang dapat dipakai saata keadaan terdesak atau memenuhi impian Anda.</string>
 </resources>

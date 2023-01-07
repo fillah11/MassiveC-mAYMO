@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".one.LoginAct"
-        android:paddingHorizontal="32dp">
+        android:paddingHorizontal="32dp"
+        android:paddingBottom="32dp">
 
         <ImageView
             android:id="@+id/image"
@@ -24,7 +24,8 @@
 
         <EditText
             android:id="@+id/username"
-            android:hint="masukkan username"
+            android:inputType="textPersonName"
+            android:hint="@string/hint_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +40,7 @@
 
         <EditText
             android:id="@+id/password"
-            android:hint="masukkan password"
+            android:hint="@string/hint_password"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,7 +62,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password"
             android:layout_marginTop="16dp"
-            android:text="Login"
+            android:text="@string/btn_login"
             android:textAllCaps="false"
             android:padding="16dp"
             android:textSize="16sp"
@@ -86,7 +87,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_Login"
             android:layout_marginTop="80dp"
-            android:text="Google"
+            android:text="@string/btn_google"
             android:textAllCaps="false"
             android:padding="16dp"
             android:textSize="16sp"
@@ -102,7 +103,7 @@
             app:layout_constraintBottom_toTopOf="@id/btn_Google"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Atau login dengan"
+            android:text="@string/tv_other_login"
             android:textColor="@color/black"
             android:background="@color/white"
             android:textSize="16sp"
@@ -121,7 +122,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tidak memiliki akun?"
+                android:text="@string/tv_no_account"
                 android:textColor="@color/black"
                 android:textSize="16sp"/>
 
@@ -129,7 +130,7 @@
                 android:id="@+id/btn_Daftar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Daftar"
+                android:text="@string/btn_daftar"
                 android:textColor="@color/dark_green"
                 android:textAllCaps="false"
                 android:minHeight="0dp"
