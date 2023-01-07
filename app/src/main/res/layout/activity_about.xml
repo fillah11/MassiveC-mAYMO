@@ -4,18 +4,133 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".one.AboutAct">
+    tools:context=".one.AboutAct"
+    android:paddingTop="24dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_Notifikasi"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="activity tentang"
+        android:text="Notifikasi"
         android:textColor="@color/black"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="36dp"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/notifikasi"
+        android:drawablePadding="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
+    <View
+        app:layout_constraintTop_toBottomOf="@id/tv_Notifikasi"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#40000000"/>
+
+    <TextView
+        android:id="@+id/tv_Suara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suara"
+        android:textColor="@color/black"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="36dp"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/suara"
+        android:drawablePadding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_Notifikasi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/tv_Suara"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#40000000"/>
+
+    <TextView
+        android:id="@+id/tv_Tema"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tema"
+        android:textColor="@color/black"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="36dp"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/tema"
+        android:drawablePadding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_Suara"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/tv_Tema"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#40000000"/>
+
+    <TextView
+        android:id="@+id/tv_Bahasa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bahasa"
+        android:textColor="@color/black"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="36dp"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/bahasa"
+        android:drawablePadding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_Tema"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/tv_Bahasa"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#40000000"/>
+
+    <TextView
+        android:id="@+id/tv_Cadangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadangan Google Drive"
+        android:textColor="@color/black"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="36dp"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/cadangan"
+        android:drawablePadding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_Bahasa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/tv_Cadangan"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#40000000"/>
+
+    <TextView
+        android:id="@+id/tv_Versi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Versi"
+        android:textColor="@color/black"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="36dp"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/versi"
+        android:drawablePadding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_Cadangan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
