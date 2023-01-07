@@ -12,7 +12,7 @@
     <string name="tv_other_login">Atau login dengan</string>
     <string name="tv_tips_header">Tips mengelola keuangan!</string>
     <string name="tv_tips">Berdasarkan penghasilan anda, anda harus mengaplikasikan 50:30:20 rule.</string>
-    <string name="tv_tips_1">50% (RpXX.XXX,00) digunakan untuk membayar tagihan bulanan dan kebutuhan pokok. Misalnya seperti listrik, belanja bulanan, cicilan, serta biaya transportasi.</string>
-    <string name="tv_tips_2">30% (RpXX.XXX,00) sebagai dana fleksibel. Sehingga barang yang anda inginkan tetapi tidak esensial dapat dibeli dengan budget ini. Contohnya Anda bisa menggunakan dana fleksibel untuk membeli baju, menonton bioskop, atau bepergian.</string>
-    <string name="tv_tips_3">20% (RpXX.XXX,00) dialokasikan untuk mencapai tujuan finansial Anda yaitu investasi, tabungan, dan asuransi. Sehingga Anda memiliki dana yang dapat dipakai saata keadaan terdesak atau memenuhi impian Anda.</string>
+    <string name="tv_tips_1">50% <b>(RpXX.XXX,00)</b> digunakan untuk membayar tagihan bulanan dan kebutuhan pokok. Misalnya seperti listrik, belanja bulanan, cicilan, serta biaya transportasi.</string>
+    <string name="tv_tips_2">30% <b>(RpXX.XXX,00)</b> sebagai dana fleksibel. Sehingga barang yang anda inginkan tetapi tidak esensial dapat dibeli dengan budget ini. Contohnya Anda bisa menggunakan dana fleksibel untuk membeli baju, menonton bioskop, atau bepergian.</string>
+    <string name="tv_tips_3">20% <b>(RpXX.XXX,00)</b> dialokasikan untuk mencapai tujuan finansial Anda yaitu investasi, tabungan, dan asuransi. Sehingga Anda memiliki dana yang dapat dipakai saata keadaan terdesak atau memenuhi impian Anda.</string>
 </resources>

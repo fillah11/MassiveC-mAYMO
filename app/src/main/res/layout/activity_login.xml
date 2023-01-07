@@ -92,9 +92,7 @@
             android:padding="16dp"
             android:textSize="16sp"
             android:textColor="@color/white"
-            android:background="@drawable/button"
-            >
-        </Button>
+            android:background="@drawable/button"/>
 
         <TextView
             app:layout_constraintStart_toStartOf="parent"
