@@ -1,12 +1,11 @@
 package com.fillah.massiveaha.one
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
-import com.fillah.massiveaha.MainActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.fillah.massiveaha.R
 
 @Suppress("DEPRECATION")

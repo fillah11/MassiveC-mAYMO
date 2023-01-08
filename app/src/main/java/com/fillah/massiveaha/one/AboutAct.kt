@@ -1,11 +1,8 @@
 package com.fillah.massiveaha.one
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.app.ActionBar
-import android.view.MenuItem
 import android.widget.Toast
-import com.fillah.massiveaha.R
+import androidx.appcompat.app.AppCompatActivity
 import com.fillah.massiveaha.databinding.ActivityAboutBinding
 
 class AboutAct : AppCompatActivity() {

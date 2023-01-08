@@ -1,7 +1,7 @@
 package com.fillah.massiveaha.three
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.fillah.massiveaha.R
 
 class KategoriAct : AppCompatActivity() {

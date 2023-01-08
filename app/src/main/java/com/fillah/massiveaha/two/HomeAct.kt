@@ -1,9 +1,8 @@
 package com.fillah.massiveaha.two
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.fillah.massiveaha.R
+import androidx.appcompat.app.AppCompatActivity
 import com.fillah.massiveaha.databinding.ActivityHomeBinding
 import com.fillah.massiveaha.one.AboutAct
 import com.fillah.massiveaha.one.TipsAct

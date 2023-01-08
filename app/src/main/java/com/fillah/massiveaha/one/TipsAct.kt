@@ -1,8 +1,7 @@
 package com.fillah.massiveaha.one
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.fillah.massiveaha.R
+import androidx.appcompat.app.AppCompatActivity
 import com.fillah.massiveaha.databinding.ActivityTipsBinding
 
 class TipsAct : AppCompatActivity() {
