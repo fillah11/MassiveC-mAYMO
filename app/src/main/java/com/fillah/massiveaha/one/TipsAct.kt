@@ -1,5 +1,6 @@
 package com.fillah.massiveaha.one
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.fillah.massiveaha.databinding.ActivityTipsBinding
@@ -13,8 +14,22 @@ class TipsAct : AppCompatActivity() {
         binding = ActivityTipsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val extra = intent.getStringExtra("category")
+
         binding.btnOk.setOnClickListener {
-            finish()
+            if (extra != null){
+                Intent(applicationContext, Category1::class.java).also {
+                    startActivity(it)
+                }
+            }
+            else{
+                finish()
+            }
+
         }
+
+
+
+
     }
 }

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".one.WelcomeAct"
+    android:paddingHorizontal="32dp">
+
+<!--    <Button-->
+<!--        android:id="@+id/back"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:minHeight="0dp"-->
+<!--        android:minWidth="0dp"-->
+<!--        android:background="@drawable/arrow_back"-->
+<!--        />-->
+    <TextView
+        android:id="@+id/tv_welcome"
+        app:layout_constraintBottom_toTopOf="@id/welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/welcome"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="32dp"
+        android:background="@drawable/edit_text">
+        
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/welcome_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_greetings"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_desc"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:justificationMode="inter_word"
+            android:lineHeight="18dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_mengerti"
+        app:layout_constraintTop_toBottomOf="@id/welcome"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mengerti"
+        android:textAllCaps="false"
+        android:background="@drawable/button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
