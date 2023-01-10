@@ -17,4 +17,13 @@
     <string name="tv_tips_3">20% <b>(RpXX.XXX,00)</b> dialokasikan untuk mencapai tujuan finansial Anda yaitu investasi, tabungan, dan asuransi. Sehingga Anda memiliki dana yang dapat dipakai saata keadaan terdesak atau memenuhi impian Anda.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_greetings">Selamat pagi!</string>
+    <string name="app_desc"><b>MayMo</b> adalah sebuah aplikasi yang dapat membantu Anda dalam mengelola keuangan, mencatata semua data keuangan, dan mengingatkan Anda agar tidak lupa membuat laporan keuangan dalam setiap harinya.</string>
+    <string name="welcome">Selamat datang di aplikasi MayMo!</string>
+    <string name="mengerti">Mengerti</string>
+    <string name="btn_survey_ya">Ya</string>
+    <string name="btn_survey_tidak">Tidak</string>
+    <string name="input_pemasukan">Berapa pemasukan bulanan (rutinan) anda?</string>
+    <string name="hint_pemasukan">RpX.XXX.XXX</string>
+    <string name="btn_pemasukan">Simpan</string>
 </resources>

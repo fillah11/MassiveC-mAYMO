@@ -1,10 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".one.OnBoarding">
+    tools:context=".one.OnBoarding"
+    android:paddingHorizontal="32dp">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="24dp"
+        android:background="@drawable/edit_text">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_pemasukan"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:lineHeight="28dp"
+            android:paddingHorizontal="64dp"/>
+        
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginTop="28dp"
+            android:hint="@string/hint_pemasukan"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:background="@drawable/edit_text"
+            android:backgroundTint="#80F49D1A"/>
+
+        <Button
+            android:id="@+id/btn_simpan"
+            app:layout_constraintTop_toBottomOf="@id/welcome"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_pemasukan"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:background="@drawable/button"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
