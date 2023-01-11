@@ -18,7 +18,7 @@ class TipsAct : AppCompatActivity() {
 
         binding.btnOk.setOnClickListener {
             if (extra != null){
-                Intent(applicationContext, Category1::class.java).also {
+                Intent(applicationContext, CategoryItem::class.java).also {
                     startActivity(it)
                 }
             }

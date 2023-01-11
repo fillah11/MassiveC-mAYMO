@@ -18,7 +18,7 @@ class OnBoarding : AppCompatActivity() {
 
         val template = intent.getStringExtra("template")
 
-        binding.btnSimpan.setOnClickListener(){
+        binding.btnSimpan.setOnClickListener{
             if (template == "yes"){
                 Intent(applicationContext, TipsAct::class.java).also {
                     it.putExtra("category", template)

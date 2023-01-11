@@ -13,9 +13,16 @@
         android:theme="@style/Theme.MassiveAha"
         tools:targetApi="31">
         <activity
-            android:name=".one.Category1"
-            android:theme="@style/Theme.MassiveAha.NoActionBar"
+            android:name=".Category"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".one.CategoryItem"
+            android:exported="false"
+            android:theme="@style/Theme.MassiveAha.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
