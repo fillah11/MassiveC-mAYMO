@@ -26,4 +26,8 @@
     <string name="input_pemasukan">Berapa pemasukan bulanan (rutinan) anda?</string>
     <string name="hint_pemasukan">RpX.XXX.XXX</string>
     <string name="btn_pemasukan">Simpan</string>
+    <string name="dana_pokok">Dana Pokok</string>
+    <string name="dana_pokok_instruksi">(Silakan pilih jenis dana pokok yang Anda inginkan)</string>
+    <string name="dana_pokok_deskripsi">Dana pokok digunakan untuk membayar tagihan bulanan dan kebutuhan pokok. Misalnya seperti listrik, belanja bulanan, cicilan, serta biaya transportasi.</string>
+    <string name="ok">ok</string>
 </resources>
