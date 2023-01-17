@@ -52,7 +52,7 @@ class SurveyAct : AppCompatActivity() {
             }
         )
 
-        binding.btnYa.setOnClickListener(){
+        binding.btnYa.setOnClickListener{
             if (survey.currentItem + 1 < surveyAdapter.itemCount){
                 survey.currentItem += 1
             } else {
@@ -63,7 +63,7 @@ class SurveyAct : AppCompatActivity() {
             }
         }
 
-        binding.btnTidak.setOnClickListener(){
+        binding.btnTidak.setOnClickListener{
             if (survey.currentItem + 1 < surveyAdapter.itemCount){
                 survey.currentItem += 1
             } else {
@@ -74,7 +74,7 @@ class SurveyAct : AppCompatActivity() {
             }
         }
 
-        binding.btnBack.setOnClickListener(){
+        binding.btnBack.setOnClickListener{
             if (survey.currentItem > 0){
                 survey.currentItem -= 1
             } else {

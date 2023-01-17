@@ -14,6 +14,7 @@
 
         <ImageView
             android:id="@+id/image"
+            android:contentDescription="@string/app_logo"
             android:layout_width="100dp"
             android:layout_height="105dp"
             android:src="@drawable/logo"
@@ -22,9 +23,19 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="128dp"/>
 
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            -->
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
         <EditText
             android:id="@+id/username"
             android:inputType="textPersonName"
+            android:autofillHints="username"
             android:hint="@string/hint_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,6 +51,7 @@
 
         <EditText
             android:id="@+id/password"
+            android:autofillHints="password"
             android:hint="@string/hint_password"
             android:inputType="textPassword"
             android:layout_width="match_parent"
@@ -58,17 +70,17 @@
             android:id="@+id/btn_Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/password"
             android:layout_marginTop="16dp"
+            android:background="@drawable/button"
+            android:padding="16dp"
             android:text="@string/btn_login"
             android:textAllCaps="false"
-            android:padding="16dp"
-            android:textSize="16sp"
             android:textColor="@color/white"
-            android:background="@drawable/button"
-            />
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password"
+            tools:ignore="TextContrastCheck" />
 
         <View
             app:layout_constraintStart_toStartOf="parent"
@@ -83,16 +95,17 @@
             android:id="@+id/btn_Google"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_Login"
             android:layout_marginTop="80dp"
+            android:background="@drawable/button"
+            android:padding="16dp"
             android:text="@string/btn_google"
             android:textAllCaps="false"
-            android:padding="16dp"
-            android:textSize="16sp"
             android:textColor="@color/white"
-            android:background="@drawable/button"/>
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_Login"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             app:layout_constraintStart_toStartOf="parent"
