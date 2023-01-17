@@ -9,9 +9,18 @@ import com.fillah.massiveaha.databinding.OnBoardingCategoryItemBinding
 
 class CategoryItemAdapter (private val categoryItems: List<CategoryItemClass>) : RecyclerView.Adapter<CategoryItemAdapter.ViewHolder>(){
 
-    inner class ViewHolder(
-        val categoryItemBinding: OnBoardingCategoryItemBinding
-    ) : RecyclerView.ViewHolder(categoryItemBinding.root)
+    var categoryItemListener: CategoryItemRecyclerViewClickListener? = null
+
+    inner class ViewHolder(private val categoryItemBinding: OnBoardingCategoryItemBinding) : RecyclerView.ViewHolder(categoryItemBinding.root){
+        fun bindItem(categoryItem: CategoryItemClass){
+            categoryItemBinding.imgCategory.setImageResource(categoryItem.img)
+            categoryItemBinding.tvCategory.text = categoryItem.category
+
+            categoryItemBinding.categoryItem.setOnClickListener {
+                categoryItemListener?.onItemClicked(it, categoryItems, adapterPosition)
+            }
+        }
+    }
 
     override fun getItemCount() = categoryItems.size
 
@@ -25,11 +34,9 @@ class CategoryItemAdapter (private val categoryItems: List<CategoryItemClass>) :
     )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        val categoryItemsViewModel = categoryItems[position]
-
-        holder.categoryItemBinding.imgCategory.setImageResource(categoryItemsViewModel.img)
-        holder.categoryItemBinding.tvCategory.text = categoryItemsViewModel.category
+        holder.bindItem(categoryItems[position])
     }
+
+
 
 }
