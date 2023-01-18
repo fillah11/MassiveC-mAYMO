@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/profil_fragment"
@@ -9,32 +8,286 @@
     tools:context=".fragment.ProfilFragment">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:id="@+id/profile1"
+        android:gravity="center">
 
-        <Button
-            android:id="@+id/btn_tentang"
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/pp"
+            android:id="@+id/img_pp"/>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tentang"
-            android:textColor="@color/white"
-            android:background="@drawable/button"
-            android:layout_marginVertical="8dp"/>
+            android:text="Yeon su"
+            android:textColor="@color/black"
+            android:id="@+id/text_pp"
+            android:layout_margin="8dp"
+            android:textStyle="bold"/>
 
-        <Button
-            android:id="@+id/btn_kategori"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kategori"
-            android:textColor="@color/white"
-            android:background="@drawable/button"
-            android:layout_marginVertical="8dp"/>
+            android:text="yeon.su@gmail.com"
+            android:textColor="@color/black"
+            android:id="@+id/text_pp2"/>
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/profile1"
+        android:text="Pengaturan"
+        android:background="@color/dark_green"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:id="@+id/text3"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/text3"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/linear1">
+        
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/notifikasi"
+            android:layout_marginLeft="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notifikasi"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:checked="true"
+            android:enabled="true"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/linear1"
+        android:background="#40000000"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/garis"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/garis"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/linear2"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/reminder"
+            android:layout_marginLeft="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengingat Harian"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:id="@+id/forward"
+            android:layout_marginLeft="190dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/linear2"
+        android:background="#40000000"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/garis1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/garis1"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/linear3"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/kategori"
+            android:layout_marginLeft="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kategori"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:id="@+id/forward1"
+            android:layout_marginLeft="245dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/linear3"
+        android:background="#40000000"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/garis2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/garis2"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/linear4"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/bahasa"
+            android:layout_marginLeft="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bahasa"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:id="@+id/forward2"
+            android:layout_marginLeft="250dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/linear4"
+        android:background="@color/dark_green"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="Lainnya" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/text4"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/linear5"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/about"
+            android:layout_marginLeft="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tentang Aplikasi"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/linear5"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/linear6"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/faq"
+            android:layout_marginLeft="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAQ"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/linear6"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/linear7"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/logout"
+            android:layout_marginLeft="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
