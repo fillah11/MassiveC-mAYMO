@@ -53,12 +53,13 @@
         android:paddingHorizontal="28dp">
 
         <ImageView
-            android:id="@+id/current_icon"
+            android:id="@+id/img_icon"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/belanja"/>
 
         <TextView
+            android:id="@+id/tv_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Belanja"

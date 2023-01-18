@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:id="@+id/user1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="30dp"
@@ -31,22 +32,12 @@
             android:textStyle="bold"/>
 
         <ImageView
+            android:id="@+id/btn_tips"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/lonceng"
             android:layout_marginTop="12dp"
             android:layout_marginLeft="200dp"/>
-
-    </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_tips"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tips"
-            android:textColor="@color/white"
-            android:background="@drawable/button"
-            android:layout_marginVertical="8dp"/>
 
     </LinearLayout>
 

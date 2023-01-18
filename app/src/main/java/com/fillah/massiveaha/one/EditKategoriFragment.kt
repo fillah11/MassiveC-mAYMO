@@ -31,8 +31,6 @@ class EditKategoriFragment : Fragment(), IconClickListener {
         "Belanja" to iconList
     )
 
-    private val pengeluaran = KategoriPengeluaran()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,9 +39,13 @@ class EditKategoriFragment : Fragment(), IconClickListener {
         _binding = FragmentEditKategoriBinding.inflate(inflater, container, false)
 
         val args = this.arguments
-        val listIcon = args?.get("kategori")
+        val category = args?.get("kategori")
+        val icon = args?.get("icon")
 
-        val adapter = icons[listIcon]?.let { IconAdapter(it) }
+        binding.imgIcon.setImageResource(icon as Int)
+        binding.tvCategory.text = category as String
+
+        val adapter = icons[category]?.let { IconAdapter(it) }
         adapter?.iconClickListener = this
 
         binding.rvIcon.apply {
