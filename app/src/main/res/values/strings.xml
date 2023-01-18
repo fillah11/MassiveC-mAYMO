@@ -30,4 +30,5 @@
     <string name="dana_pokok_instruksi">(Silakan pilih jenis dana pokok yang Anda inginkan)</string>
     <string name="dana_pokok_deskripsi">Dana pokok digunakan untuk membayar tagihan bulanan dan kebutuhan pokok. Misalnya seperti listrik, belanja bulanan, cicilan, serta biaya transportasi.</string>
     <string name="ok">ok</string>
+    <string name="app_logo">app_logo</string>
 </resources>

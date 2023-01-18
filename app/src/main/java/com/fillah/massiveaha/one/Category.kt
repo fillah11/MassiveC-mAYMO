@@ -3,13 +3,14 @@ package com.fillah.massiveaha.one
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.fillah.massiveaha.R
 import com.fillah.massiveaha.databinding.ActivityOnBoardingCategoryBinding
 import com.fillah.massiveaha.two.HomeAct
 import kotlinx.android.synthetic.main.activity_on_boarding_category.*
 
-class Category : AppCompatActivity() {
+class Category : AppCompatActivity(), CategoryRecyclerViewClickListener {
 
     private lateinit var binding: ActivityOnBoardingCategoryBinding
 
@@ -122,6 +123,8 @@ class Category : AppCompatActivity() {
 
         category.isUserInputEnabled = false
 
+        categoryAdapter.categoryListener = this
+
         binding.btnOk.setOnClickListener{
             if (category.currentItem + 1 < categoryAdapter.itemCount){
                 category.currentItem += 1
@@ -131,6 +134,46 @@ class Category : AppCompatActivity() {
                     startActivity(it)
                 }
             }
+        }
+    }
+
+    override fun onCategoryItemClicked(
+        category: List<CategoryClass>,
+        categoryPosition: Int,
+        categoryItemView: View,
+        categoryItemPosition: Int
+    ) {
+
+        if (!category[categoryPosition].item[categoryItemPosition].isSelected) {
+
+            categoryItemView.alpha = 0.3f
+
+            println("if ini parent $categoryPosition "+category[categoryPosition].item[categoryItemPosition])
+
+            category[categoryPosition].item[categoryItemPosition].isSelected = true
+
+            println(
+                "kategori ${category[categoryPosition].item[categoryItemPosition].category} dipilih. status: ${category[categoryPosition].item[categoryItemPosition].isSelected}" +
+                        "\nparent $categoryPosition" +
+                        "\nchild $categoryItemPosition"
+            )
+            println("if parent $categoryPosition now "+category[categoryPosition].item[categoryItemPosition])
+
+        }
+        else {
+
+            categoryItemView.alpha = 1f
+
+            println("else ini parent $categoryPosition "+category[categoryPosition].item[categoryItemPosition])
+
+            category[categoryPosition].item[categoryItemPosition].isSelected = false
+
+            println(
+                "kategori ${category[categoryPosition].item[categoryItemPosition].category} tidak dipilih. status: ${category[categoryPosition].item[categoryItemPosition].isSelected}" +
+                        "\nparent $categoryPosition" +
+                        "\nchild $categoryItemPosition"
+            )
+            println("else parent $categoryPosition now "+category[categoryPosition].item[categoryItemPosition])
         }
     }
 }
