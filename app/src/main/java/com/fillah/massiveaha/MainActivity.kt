@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(homeFragment)
         supportActionBar?.hide()
 
-        bottomNav.setOnNavigationItemSelectedListener {
+        bottomNav.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.home -> replaceFragment(homeFragment)
                 R.id.kalender -> replaceFragment(kalenderFragment)

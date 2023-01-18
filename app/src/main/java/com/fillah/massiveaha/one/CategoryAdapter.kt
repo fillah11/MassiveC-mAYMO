@@ -15,7 +15,7 @@ class CategoryAdapter (private val categories: List<CategoryClass>) : RecyclerVi
 
     inner class ViewHolder(private val categoryBinding: OnBoardingCategoryContainerBinding) : RecyclerView.ViewHolder(categoryBinding.root), CategoryItemRecyclerViewClickListener{
         fun bindItem(category: CategoryClass){
-            val categoryItem = category.item.toMutableList()
+            val categoryItem = category.item
             val adapter = CategoryItemAdapter(categoryItem)
             adapter.categoryItemListener = this
 

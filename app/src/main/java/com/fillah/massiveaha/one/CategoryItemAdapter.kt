@@ -36,7 +36,4 @@ class CategoryItemAdapter (private val categoryItems: List<CategoryItemClass>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItem(categoryItems[position])
     }
-
-
-
 }
