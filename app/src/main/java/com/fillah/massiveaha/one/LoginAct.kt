@@ -3,8 +3,8 @@ package com.fillah.massiveaha.one
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.fillah.massiveaha.MainActivity
 import com.fillah.massiveaha.databinding.ActivityLoginBinding
-import com.fillah.massiveaha.two.HomeAct
 
 class LoginAct : AppCompatActivity() {
 
@@ -21,7 +21,7 @@ class LoginAct : AppCompatActivity() {
         }
 
         binding.btnLogin.setOnClickListener {
-            val intent = Intent(this, HomeAct::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
