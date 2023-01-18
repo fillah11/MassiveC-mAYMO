@@ -5,14 +5,39 @@
     android:layout_height="match_parent"
     tools:context=".fragment.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="HOME FRAGMENT"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="70sp"
-        />
+        android:layout_height="60dp"
+        android:id="@+id/user1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ic_baseline_attach_money_24"
+            android:id="@+id/img1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="15dp"
+            android:text="Halo, Yeon su"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/lonceng"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="200dp"/>
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>
