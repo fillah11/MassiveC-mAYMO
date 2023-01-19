@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "471674951535",
+    "project_id": "massive-challenge",
+    "storage_bucket": "massive-challenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471674951535:android:763bac61ae0e4a82ccba9a",
+        "android_client_info": {
+          "package_name": "com.fillah.massiveaha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471674951535-4q5r35h0c3hjfkg45gqnhk7r2l5a4rqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fillah.massiveaha",
+            "certificate_hash": "a4a08cf9ec4ac322bd561d9684b454f44210113b"
+          }
+        },
+        {
+          "client_id": "471674951535-2qp8l5ju9u27f9os1aj3g8pln4f9d62u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOFetDS5YVpgaW-s081Up3wXT0CraY32g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471674951535-2qp8l5ju9u27f9os1aj3g8pln4f9d62u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -270,7 +270,7 @@
         android:layout_below="@id/linear6"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:id="@+id/linear7"
+        android:id="@+id/btn_logout"
         >
 
         <ImageView
