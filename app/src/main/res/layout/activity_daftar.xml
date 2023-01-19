@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".one.LoginAct"
+        tools:context=".one.DaftarAct"
         android:paddingHorizontal="32dp"
         android:paddingBottom="32dp">
 
@@ -20,7 +20,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="128dp"/>
+            android:layout_marginTop="128dp"
+            android:contentDescription="@string/app_logo" />
 
         <EditText
             android:id="@+id/email"
@@ -36,10 +37,10 @@
             android:textSize="16sp"
             android:background="@drawable/edit_text"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"/>
+            android:textColorHint="#80000000"/>
 
         <EditText
-            android:id="@+id/nama"
+            android:id="@+id/username"
             android:hint="@string/hint_username"
             android:inputType="textPersonName"
             android:layout_width="match_parent"
@@ -51,7 +52,7 @@
             android:padding="16dp"
             android:textSize="16sp"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textColorHint="#80000000"
             android:background="@drawable/edit_text"/>
 
         <EditText
@@ -62,12 +63,12 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nama"
+            app:layout_constraintTop_toBottomOf="@id/username"
             android:layout_marginTop="16dp"
             android:padding="16dp"
             android:textSize="16sp"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textColorHint="#80000000"
             android:background="@drawable/edit_text"/>
 
         <EditText
@@ -83,7 +84,7 @@
             android:padding="16dp"
             android:textSize="16sp"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textColorHint="#80000000"
             android:background="@drawable/edit_text"/>
 
         <CheckBox
