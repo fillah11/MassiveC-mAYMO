@@ -5,13 +5,43 @@
     android:layout_height="match_parent"
     tools:context=".fragment.Pemasukan">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:textSize="40sp"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home Fragment" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/bonus_icon"
+            android:text="Bonus"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/gaji_icon"
+            android:text="Gaji"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/investasi_icon"
+            android:text="Investasi"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
