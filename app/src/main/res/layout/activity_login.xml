@@ -23,15 +23,6 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="128dp"/>
 
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
-<!--            -->
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"/>-->
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
-
         <EditText
             android:id="@+id/email"
             android:inputType="textEmailAddress"

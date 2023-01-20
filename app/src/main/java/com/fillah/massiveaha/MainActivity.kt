@@ -26,8 +26,9 @@ class MainActivity : AppCompatActivity() {
     private val functions = Functions()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         checkCredential()
+
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         replaceFragment(homeFragment)

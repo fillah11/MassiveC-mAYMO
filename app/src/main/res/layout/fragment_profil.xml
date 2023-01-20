@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:text="Yeon su"
             android:textColor="@color/black"
-            android:id="@+id/text_pp"
+            android:id="@+id/tv_username"
             android:layout_margin="8dp"
             android:textStyle="bold"/>
 
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:text="yeon.su@gmail.com"
             android:textColor="@color/black"
-            android:id="@+id/text_pp2"/>
+            android:id="@+id/tv_email"/>
 
     </LinearLayout>
 
