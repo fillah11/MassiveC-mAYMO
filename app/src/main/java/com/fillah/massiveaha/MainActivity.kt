@@ -22,12 +22,13 @@ class MainActivity : AppCompatActivity() {
 //    private val kalenderFragment = KalenderFragment()
     private val grafikFragment = GrafikFragment()
     private val profileFragment = ProfilFragment()
-
+    val auth = FirebaseAuth.getInstance()
     private val functions = Functions()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         checkCredential()
+
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         replaceFragment(homeFragment)

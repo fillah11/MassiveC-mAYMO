@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
+import com.fillah.massiveaha.Functions
 import com.fillah.massiveaha.MainActivity
 import com.fillah.massiveaha.R
 import com.fillah.massiveaha.databinding.FragmentProfilBinding
@@ -22,7 +23,7 @@ class ProfilFragment : Fragment() {
     private var _binding: FragmentProfilBinding? = null
     private val binding get() = _binding!!
 
-    private val auth = FirebaseAuth.getInstance()
+    private val functions = Functions()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +32,20 @@ class ProfilFragment : Fragment() {
         // Inflate the layout for this fragment
 
         _binding = FragmentProfilBinding.inflate(inflater, container, false)
+
+        //get user data
+        functions.userData.get()
+            .addOnSuccessListener {
+
+                val username = it.data?.get("username").toString()
+                val email = it.data?.get("email").toString()
+
+                binding.tvUsername.text = username
+                binding.tvEmail.text = email
+            }
+            .addOnFailureListener {
+                println("failed to retrieve data. $it")
+            }
 
         binding.btnTentang.setOnClickListener{
             val intent = Intent(activity, AboutAct::class.java)
@@ -46,7 +61,7 @@ class ProfilFragment : Fragment() {
         }
 
         binding.btnLogout.setOnClickListener {
-            auth.signOut()
+            functions.logout()
             //continue to activity
             val intent = Intent(activity, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

@@ -41,6 +41,14 @@ class HomeFragment : Fragment() {
 
 
                 }
+
+                val username = "Halo, ${it.data?.get("username").toString()}"
+                val aset = functions.formatRupiah(it.data?.get("aset").toString().toDouble())
+                val pendapatan = "dari ${functions.formatRupiah(it.data?.get("pendapatan").toString().toDouble())}"
+
+                binding.tvUsername.text = username
+                binding.tvAset.text = aset
+                binding.tvPendapatan.text = pendapatan
             }
             .addOnFailureListener {
                 println("failed to retrieve data. $it")
