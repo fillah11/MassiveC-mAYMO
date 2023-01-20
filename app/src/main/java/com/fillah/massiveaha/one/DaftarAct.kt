@@ -163,7 +163,8 @@ class DaftarAct : AppCompatActivity() {
         // value yang mau ditambahkan ke db
         val user = hashMapOf(
             "email" to email,
-            "username" to username
+            "username" to username,
+            "onboarding" to false
         )
 
         //add data to db
