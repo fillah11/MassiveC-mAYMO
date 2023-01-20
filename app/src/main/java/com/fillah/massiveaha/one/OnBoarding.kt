@@ -3,6 +3,7 @@ package com.fillah.massiveaha.one
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.fillah.massiveaha.Functions
 import com.fillah.massiveaha.MainActivity
 import com.fillah.massiveaha.databinding.ActivityOnBoardingBinding
 import com.fillah.massiveaha.two.HomeAct
@@ -10,6 +11,7 @@ import com.fillah.massiveaha.two.HomeAct
 class OnBoarding : AppCompatActivity() {
 
     private lateinit var binding: ActivityOnBoardingBinding
+    private val functions = Functions()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +29,7 @@ class OnBoarding : AppCompatActivity() {
                 }
             } else{
                 Intent(applicationContext, MainActivity::class.java).also {
+                    functions.finishedIntro()
                     it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(it)
                 }

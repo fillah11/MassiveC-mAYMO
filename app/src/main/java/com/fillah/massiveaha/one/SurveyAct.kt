@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
+import com.fillah.massiveaha.Functions
 import com.fillah.massiveaha.R
 import com.fillah.massiveaha.databinding.ActivitySurveyBinding
 import com.fillah.massiveaha.two.HomeAct
@@ -17,6 +18,8 @@ import kotlinx.android.synthetic.main.activity_survey.*
 class SurveyAct : AppCompatActivity() {
 
     private lateinit var binding: ActivitySurveyBinding
+
+    private val functions = Functions()
 
     private val surveyAdapter = SurveyAdapter(
         listOf(
@@ -56,6 +59,7 @@ class SurveyAct : AppCompatActivity() {
             if (survey.currentItem + 1 < surveyAdapter.itemCount){
                 survey.currentItem += 1
             } else {
+                functions.useTemplate()
                 Intent(applicationContext, OnBoarding::class.java).also {
                     it.putExtra("template","yes")
                     startActivity(it)

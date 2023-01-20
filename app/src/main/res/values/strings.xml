@@ -33,4 +33,7 @@
     <string name="app_logo">app_logo</string>
     <string name="back"><![CDATA[<-]]></string>
     <string name="forward"><![CDATA[->]]></string>
+    <string name="pilih_icon">Pilih Icon</string>
+    <string name="pengeluaran">Pengeluaran</string>
+    <string name="pemasukan">Pemasukan</string>
 </resources>

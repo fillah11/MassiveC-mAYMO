@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
+import com.fillah.massiveaha.Functions
 import com.fillah.massiveaha.MainActivity
 import com.fillah.massiveaha.R
 import com.fillah.massiveaha.databinding.ActivityOnBoardingCategoryBinding
@@ -13,6 +14,8 @@ import kotlinx.android.synthetic.main.activity_on_boarding_category.*
 class Category : AppCompatActivity(), CategoryRecyclerViewClickListener {
 
     private lateinit var binding: ActivityOnBoardingCategoryBinding
+
+    private val functions = Functions()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -277,6 +280,7 @@ class Category : AppCompatActivity(), CategoryRecyclerViewClickListener {
             if (category.currentItem + 1 < categoryAdapter.itemCount){
                 category.currentItem += 1
             } else {
+                functions.finishedIntro()
                 Intent(applicationContext, MainActivity::class.java).also {
                     it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(it)
