@@ -23,7 +23,6 @@ class ProfilFragment : Fragment() {
     private var _binding: FragmentProfilBinding? = null
     private val binding get() = _binding!!
 
-    private val auth = FirebaseAuth.getInstance()
     private val functions = Functions()
 
     override fun onCreateView(
@@ -62,7 +61,7 @@ class ProfilFragment : Fragment() {
         }
 
         binding.btnLogout.setOnClickListener {
-            auth.signOut()
+            functions.logout()
             //continue to activity
             val intent = Intent(activity, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
