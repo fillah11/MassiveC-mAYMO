@@ -6,9 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import com.fillah.massiveaha.Functions
+import com.fillah.massiveaha.R
 import com.fillah.massiveaha.databinding.FragmentHomeBinding
+import com.fillah.massiveaha.one.DompetTanpaTemplateFragment
+import com.fillah.massiveaha.one.DompetTemplateFragment
 import com.fillah.massiveaha.one.TipsAct
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class HomeFragment : Fragment() {
@@ -29,10 +34,12 @@ class HomeFragment : Fragment() {
                 val useTemplate = it.data?.get("template")
 
                 if (useTemplate as Boolean){
-                    //kalo pake template mau apa
+
 
                 } else {
                     //kalo ga pake template mau apa
+
+
                 }
 
                 val username = "Halo, ${it.data?.get("username").toString()}"
