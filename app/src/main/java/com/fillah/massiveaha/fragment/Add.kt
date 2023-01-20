@@ -28,19 +28,19 @@ class Add : AppCompatActivity() {
             Pengeluaran()
         )
 
-        viewPager.adapter =
-            ViewPager(listFragment,supportFragmentManager,lifecycle)
+//        viewPager.adapter =
+//            ViewPager(listFragment,supportFragmentManager,lifecycle)
 
-        TabLayoutMediator(tabLayout,viewPager){
-                tab,position ->
-            when(position){
-                0 -> {
-                    tab.text = "Pemasukan"
-                }
-                1 -> {
-                    tab.text = "Pengeluaran"
-                }
-            }
-        }.attach()
+//        TabLayoutMediator(tabLayout,viewPager){
+//                tab,position ->
+//            when(position){
+//                0 -> {
+//                    tab.text = "Pemasukan"
+//                }
+//                1 -> {
+//                    tab.text = "Pengeluaran"
+//                }
+//            }
+//        }.attach()
     }
 }
