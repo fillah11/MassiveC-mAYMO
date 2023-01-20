@@ -7,12 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.fillah.massiveaha.Functions
 import com.fillah.massiveaha.R
 import com.fillah.massiveaha.databinding.FragmentHomeBinding
-import com.fillah.massiveaha.one.DompetTanpaTemplateFragment
-import com.fillah.massiveaha.one.DompetTemplateFragment
-import com.fillah.massiveaha.one.TipsAct
+import com.fillah.massiveaha.one.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -21,6 +20,9 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private val functions = Functions()
+
+    private val DompetTemplateFragment = DompetTemplateFragment()
+    private val DompetTanpaTemplateFragment = DompetTanpaTemplateFragment()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,10 +36,14 @@ class HomeFragment : Fragment() {
                 val useTemplate = it.data?.get("template")
 
                 if (useTemplate as Boolean){
-
-
+                    val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+                    transaction.replace(binding.FrameDompet.id ,DompetTemplateFragment)
+                    transaction.commit()
                 } else {
                     //kalo ga pake template mau apa
+                    val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+                    transaction.replace(binding.FrameDompet.id ,DompetTanpaTemplateFragment)
+                    transaction.commit()
 
 
                 }
@@ -46,9 +52,9 @@ class HomeFragment : Fragment() {
                 val aset = functions.formatRupiah(it.data?.get("aset").toString().toDouble())
                 val pendapatan = "dari ${functions.formatRupiah(it.data?.get("pendapatan").toString().toDouble())}"
 
-                binding.tvUsername.text = username
+               /*binding.tvUsername.text = username
                 binding.tvAset.text = aset
-                binding.tvPendapatan.text = pendapatan
+                binding.tvPendapatan.text = pendapatan*/
             }
             .addOnFailureListener {
                 println("failed to retrieve data. $it")
