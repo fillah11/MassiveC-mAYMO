@@ -164,7 +164,8 @@ class DaftarAct : AppCompatActivity() {
         val user = hashMapOf(
             "email" to email,
             "username" to username,
-            "onboarding" to false
+            "intro" to true,
+            "template" to false
         )
 
         //add data to db

@@ -70,4 +70,8 @@ class Functions {
         return split[0].substring(0,2)+""+split[0].substring(2,length)
     }
 
+    fun logout(){
+        auth.signOut()
+    }
+
 }
