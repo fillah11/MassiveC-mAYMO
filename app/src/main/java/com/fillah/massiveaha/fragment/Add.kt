@@ -25,7 +25,7 @@ class Add : AppCompatActivity() {
 
         val listFragment = arrayListOf(
             Pemasukan(),
-            Pengeluaran()
+            //Pengeluaran()
         )
 
 //        viewPager.adapter =

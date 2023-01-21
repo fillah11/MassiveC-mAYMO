@@ -119,7 +119,7 @@ class KategoriPengeluaran : Fragment(), KategoriClickListener {
         println(bundle)
         editKategoriFragment.arguments = bundle
 
-        val transaction: FragmentTransaction =requireFragmentManager().beginTransaction()
+        val transaction = parentFragmentManager.beginTransaction()
         transaction.replace(R.id.frame_layout, editKategoriFragment)
         transaction.addToBackStack("kategori")
         transaction.commit()

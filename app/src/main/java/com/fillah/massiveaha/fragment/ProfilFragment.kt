@@ -54,10 +54,11 @@ class ProfilFragment : Fragment() {
 
         binding.btnKategori.setOnClickListener{
             val kategoriFragment = KategoriFragment()
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.frame_layout, kategoriFragment)
-            transaction.addToBackStack("profil")
-            transaction.commit()
+            val transaction= parentFragmentManager
+            transaction.beginTransaction()
+                .replace(R.id.frame_layout, kategoriFragment)
+                .addToBackStack("profil")
+                .commit()
         }
 
         binding.btnLogout.setOnClickListener {

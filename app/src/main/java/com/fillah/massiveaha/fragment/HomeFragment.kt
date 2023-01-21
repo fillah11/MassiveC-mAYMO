@@ -21,8 +21,8 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
     private val functions = Functions()
 
-    private val DompetTemplateFragment = DompetTemplateFragment()
-    private val DompetTanpaTemplateFragment = DompetTanpaTemplateFragment()
+    private val dompetTemplateFragment = DompetTemplateFragment()
+    private val dompetTanpaTemplateFragment = DompetTanpaTemplateFragment()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,16 +36,15 @@ class HomeFragment : Fragment() {
                 val useTemplate = it.data?.get("template")
 
                 if (useTemplate as Boolean){
-                    val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-                    transaction.replace(binding.FrameDompet.id ,DompetTemplateFragment)
-                    transaction.commit()
+                    //kalo pake template
+                    parentFragmentManager.beginTransaction()
+                        .add(binding.FrameDompet.id ,dompetTemplateFragment)
+                        .commit()
                 } else {
                     //kalo ga pake template mau apa
-                    val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-                    transaction.replace(binding.FrameDompet.id ,DompetTanpaTemplateFragment)
-                    transaction.commit()
-
-
+                    parentFragmentManager.beginTransaction()
+                        .add(binding.FrameDompet.id ,dompetTanpaTemplateFragment)
+                        .commit()
                 }
 
                 val username = "Halo, ${it.data?.get("username").toString()}"
@@ -68,4 +67,11 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    override fun onDestroyView() {
+        parentFragmentManager.beginTransaction()
+            .remove(dompetTemplateFragment)
+            .remove(dompetTanpaTemplateFragment)
+            .commit()
+        super.onDestroyView()
+    }
 }
