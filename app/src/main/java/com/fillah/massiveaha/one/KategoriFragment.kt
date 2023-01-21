@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.fillah.massiveaha.databinding.FragmentKategoriBinding
 
@@ -17,6 +18,8 @@ class KategoriFragment : Fragment() {
 
     private val kategoriPengeluaran = KategoriPengeluaran()
     private val kategoriPemasukan = KategoriPemasukan()
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,9 +37,9 @@ class KategoriFragment : Fragment() {
                 binding.btnPengeluaran.alpha = 1f
                 binding.btnPemasukan.alpha = 0.4f
 
-                val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-                transaction.replace(binding.kategoriContainer.id, kategoriPengeluaran)
-                transaction.commit()
+                parentFragmentManager.beginTransaction()
+                    .replace(binding.kategoriContainer.id, kategoriPengeluaran)
+                    .commit()
             } else {
                 return@setOnClickListener
             }
@@ -49,22 +52,42 @@ class KategoriFragment : Fragment() {
                 binding.btnPengeluaran.alpha = 0.4f
                 binding.btnPemasukan.alpha = 1f
 
-                val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-                transaction.replace(binding.kategoriContainer.id, kategoriPemasukan)
-                transaction.commit()
+                parentFragmentManager.beginTransaction()
+                    .replace(binding.kategoriContainer.id, kategoriPemasukan)
+                    .commit()
             }
         }
 
         return binding.root
     }
 
+    override fun onDestroyView() {
+        parentFragmentManager.beginTransaction()
+            .remove(kategoriPengeluaran)
+            .remove(kategoriPemasukan)
+            .commit()
+        super.onDestroyView()
+    }
+
     private fun initialCondition(){
 
-        val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-        transaction.replace(binding.kategoriContainer.id, kategoriPengeluaran)
-        transaction.commit()
+        if (btnPengeluaran){
+            btnPengeluaran = true
+            parentFragmentManager.beginTransaction()
+                .add(binding.kategoriContainer.id, kategoriPengeluaran)
+                .commit()
 
-        binding.btnPemasukan.alpha = 0.4f
+            binding.btnPemasukan.alpha = 0.4f
+        } else {
+            btnPengeluaran = false
+            parentFragmentManager.beginTransaction()
+                .add(binding.kategoriContainer.id, kategoriPemasukan)
+                .commit()
+
+            binding.btnPengeluaran.alpha = 0.4f
+        }
+
+
 
     }
 
