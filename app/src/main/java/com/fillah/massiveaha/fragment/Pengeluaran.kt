@@ -24,7 +24,7 @@ class Pengeluaran : Fragment()
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            setContentView(R.layout.fragment_pengeluaran)
+//            setContentView(R.layout.fragment_pengeluaran)
 
             imageId = arrayOf(
                 R.drawable.makan_icon,
@@ -71,9 +71,9 @@ class Pengeluaran : Fragment()
 
 
 
-            recView = findViewById(R.id.recView)
+//            recView = findViewById(R.id.recView)
             // the type of the recyclerView. linear or grid
-            recView.layoutManager = GridLayoutManager(this,3)
+//            recView.layoutManager = GridLayoutManager(this,3)
 
             recView.setHasFixedSize(true)
 

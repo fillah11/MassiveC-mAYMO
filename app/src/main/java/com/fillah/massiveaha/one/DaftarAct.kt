@@ -165,7 +165,8 @@ class DaftarAct : AppCompatActivity() {
             "email" to email,
             "username" to username,
             "intro" to true,
-            "template" to false
+            "template" to false,
+            "aset" to 0
         )
 
         //add data to db

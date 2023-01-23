@@ -7,16 +7,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.fillah.massiveaha.R
 import com.fillah.massiveaha.databinding.ListEditIconBinding
 
-class IconAdapter (private val iconList: List<IconClass>): RecyclerView.Adapter<IconAdapter.ViewHolder>() {
+class IconAdapter (private val iconList: List<Int>): RecyclerView.Adapter<IconAdapter.ViewHolder>() {
 
     var iconClickListener : IconClickListener? = null
 
     inner class ViewHolder(private val iconBinding: ListEditIconBinding): RecyclerView.ViewHolder(iconBinding.root){
-        fun bindItem(icon: IconClass){
-            iconBinding.icon.setImageResource(icon.img)
+        fun bindItem(icon: Int){
+            iconBinding.icon.setImageResource(icon)
 
             iconBinding.iconItem.setOnClickListener {
-                iconClickListener?.onItemClicked(icon.img, it)
+                iconClickListener?.onItemClicked(icon, it)
             }
 
         }

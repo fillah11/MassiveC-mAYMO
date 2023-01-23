@@ -1,22 +1,18 @@
 package com.fillah.massiveaha.fragment
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toolbar
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentTransaction
 import com.fillah.massiveaha.Functions
 import com.fillah.massiveaha.MainActivity
 import com.fillah.massiveaha.R
 import com.fillah.massiveaha.databinding.FragmentProfilBinding
 import com.fillah.massiveaha.one.AboutAct
 import com.fillah.massiveaha.one.KategoriFragment
-import com.fillah.massiveaha.one.LoginAct
-import com.google.firebase.auth.FirebaseAuth
 
 class ProfilFragment : Fragment() {
 
@@ -30,22 +26,9 @@ class ProfilFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         // Inflate the layout for this fragment
-
         _binding = FragmentProfilBinding.inflate(inflater, container, false)
 
-        //get user data
-        functions.userData.get()
-            .addOnSuccessListener {
-
-                val username = it.data?.get("username").toString()
-                val email = it.data?.get("email").toString()
-
-                binding.tvUsername.text = username
-                binding.tvEmail.text = email
-            }
-            .addOnFailureListener {
-                println("failed to retrieve data. $it")
-            }
+        readUserData()
 
         binding.btnTentang.setOnClickListener{
             val intent = Intent(activity, AboutAct::class.java)
@@ -70,5 +53,21 @@ class ProfilFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    private fun readUserData(){
+
+        //get user data
+        functions.userData.get()
+            .addOnSuccessListener {
+                val username = it.data?.get("username").toString()
+                val email = it.data?.get("email").toString()
+
+                binding.tvUsername.text = username
+                binding.tvEmail.text = email
+            }
+            .addOnFailureListener {
+                println("failed to retrieve data. $it")
+            }
     }
 }

@@ -23,7 +23,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yeon su"
             android:textColor="@color/black"
             android:id="@+id/tv_username"
             android:layout_margin="8dp"
@@ -32,7 +31,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="yeon.su@gmail.com"
             android:textColor="@color/black"
             android:id="@+id/tv_email"/>
 
