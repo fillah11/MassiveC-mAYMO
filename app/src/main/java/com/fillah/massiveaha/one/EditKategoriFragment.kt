@@ -16,19 +16,159 @@ class EditKategoriFragment : Fragment(), IconClickListener {
     private lateinit var _binding: FragmentEditKategoriBinding
     private val binding get() = _binding
 
-    private val iconList = listOf(
-        IconClass(R.drawable.belanja_v1),
-        IconClass(R.drawable.belanja_v2),
-        IconClass(R.drawable.belanja_v3),
-        IconClass(R.drawable.belanja_v4),
-        IconClass(R.drawable.belanja),
-        IconClass(R.drawable.belanja_v6),
-        IconClass(R.drawable.belanja_v7),
-        IconClass(R.drawable.belanja_v8)
+    private val iconMakan = listOf(
+        R.drawable.makan,
+        R.drawable.makan_v2,
+        R.drawable.makan_v3,
+        R.drawable.makan_v4,
+        R.drawable.makan_v5,
+        R.drawable.makan_v6,
+        R.drawable.makan_v7,
+        R.drawable.makan_v8
+    )
+
+    private val iconJajan = listOf(
+        R.drawable.jajan,
+        R.drawable.jajan_v2,
+        R.drawable.jajan_v3,
+        R.drawable.jajan_v4
+    )
+
+    private val iconBelanja = listOf(
+        R.drawable.belanja_v1,
+        R.drawable.belanja_v2,
+        R.drawable.belanja_v3,
+        R.drawable.belanja_v4,
+        R.drawable.belanja,
+        R.drawable.belanja_v6,
+        R.drawable.belanja_v7,
+        R.drawable.belanja_v8
+    )
+
+    private val iconHadiah = listOf(
+        R.drawable.hadiah,
+        R.drawable.hadiah_v2,
+        R.drawable.hadiah_v3,
+        R.drawable.hadiah_v4
+    )
+
+    private val iconPeliharaan = listOf(
+        R.drawable.peliharaan,
+        R.drawable.peliharaan_v2,
+        R.drawable.peliharaan_v3,
+        R.drawable.peliharaan_v4
+    )
+
+    private val iconLaundri = listOf(
+        R.drawable.laundri,
+        R.drawable.laundri_v2,
+        R.drawable.laundri_v3,
+        R.drawable.laundri_v4
+    )
+
+    private val iconUtang = listOf(
+        R.drawable.utang,
+        R.drawable.utang_v2,
+        R.drawable.utang_v3,
+        R.drawable.utang_v4
+    )
+
+    private val iconTeknologi = listOf(
+        R.drawable.teknologi,
+        R.drawable.teknologi_v2,
+        R.drawable.teknologi_v3,
+        R.drawable.teknologi_v4
+    )
+
+    private val iconPajak = listOf(
+        R.drawable.pajak,
+        R.drawable.pajak_v2,
+        R.drawable.pajak_v3,
+        R.drawable.pajak_v4
+    )
+
+    private val iconSosial = listOf(
+        R.drawable.sosial,
+        R.drawable.sosial_v2,
+        R.drawable.sosial_v3,
+        R.drawable.sosial_v4
+    )
+
+    private val iconRumah = listOf(
+        R.drawable.rumah,
+        R.drawable.rumah_v2,
+        R.drawable.rumah_v3,
+        R.drawable.rumah_v4
+    )
+
+    private val iconLiburan = listOf(
+        R.drawable.liburan,
+        R.drawable.liburan_v2,
+        R.drawable.liburan_v3,
+        R.drawable.liburan_v4
+    )
+
+    private val iconKecantikan = listOf(
+        R.drawable.kecantikan,
+        R.drawable.kecantikan_v2,
+        R.drawable.kecantikan_v3,
+        R.drawable.kecantikan_v4
+    )
+
+    private val iconMedis = listOf(
+        R.drawable.medis,
+        R.drawable.medis_v2,
+        R.drawable.medis_v3,
+        R.drawable.medis_v4
+    )
+
+    private val iconListrik = listOf(
+        R.drawable.listrik,
+        R.drawable.listrik_v2,
+        R.drawable.listrik_v3,
+        R.drawable.listrik_v4
+    )
+
+    private val iconTransportasi = listOf(
+        R.drawable.transportasi,
+        R.drawable.transportasi_v2,
+        R.drawable.transportasi_v3,
+        R.drawable.transportasi_v4
+    )
+
+    private val iconLaluLintas = listOf(
+        R.drawable.lalulintas,
+//        R.drawable.lalulintas_v2,
+//        R.drawable.lalulintas_v3,
+//        R.drawable.lalulintas_v4
+    )
+
+    private val iconPendidikan = listOf(
+        R.drawable.pendidikan,
+        R.drawable.pendidikan_v2,
+        R.drawable.pendidikan_v3,
+        R.drawable.pendidikan_v4
     )
 
     private val icons = mapOf(
-        "Belanja" to iconList
+        "Makan" to iconMakan,
+        "Jajan" to iconJajan,
+        "Belanja" to iconBelanja,
+        "Hadiah" to iconHadiah,
+        "Peliharaan" to iconPeliharaan,
+        "Laundri" to iconLaundri,
+        "Utang" to iconUtang,
+        "Teknologi" to iconTeknologi,
+        "Pajak" to iconPajak,
+        "Sosial" to iconSosial,
+        "Rumah" to iconRumah,
+        "Liburan" to iconLiburan,
+        "Kecantikan" to iconKecantikan,
+        "Medis" to iconMedis,
+        "Listrik" to iconListrik,
+        "Transportasi" to iconTransportasi,
+        "Lalu Lintas" to iconLaluLintas,
+        "Pendidikan" to iconPendidikan,
     )
 
     override fun onCreateView(

@@ -41,15 +41,13 @@ class OnBoarding : AppCompatActivity() {
             //kalo lolos validasi
             if (template == "yes"){
                 Intent(applicationContext, TipsAct::class.java).also {
-                    functions.updatePendapatan(inputPemasukan.toString().toInt())
-                    functions.updateAset(inputPemasukan.toString().toInt())
+                    functions.updateTemplate(inputPemasukan.toString().toInt())
                     it.putExtra("category", template)
                     startActivity(it)
                 }
             } else{
                 Intent(applicationContext, MainActivity::class.java).also {
-                    functions.updatePendapatan(inputPemasukan.toString().toInt())
-                    functions.updateAset(inputPemasukan.toString().toInt())
+                    functions.updateTanpaTemplate(inputPemasukan.toString().toInt())
                     functions.finishedIntro()
                     it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(it)

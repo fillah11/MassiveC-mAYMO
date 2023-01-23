@@ -39,25 +39,48 @@ class Functions {
             }
     }
 
-    fun updatePendapatan(pendapatan: Int){
+    fun updateTemplate(pendapatan: Int){
+        val pokok = pendapatan /2
+        val fleksibel = pendapatan * 3/10
+        val investasi = pendapatan /5
+
         userData
-            .update("pendapatan", pendapatan)
+            .update(mapOf(
+                "pendapatan" to pendapatan,
+                "aset" to pendapatan,
+                "pokok" to pokok,
+                "fleksibel" to fleksibel,
+                "investasi" to investasi,
+                "aset_pokok" to pokok,
+                "aset_fleksibel" to fleksibel,
+                "aset_investasi" to investasi
+            ))
             .addOnSuccessListener {
-                println("successfully update. $it")
+                println("Successfully updated. $it")
             }
             .addOnFailureListener {
-                println("update failed. $it")
+                println("Update failed. $it")
             }
     }
 
-    fun updateAset(aset: Int){
+    fun updateTanpaTemplate(pendapatan: Int){
+
         userData
-            .update("aset", aset)
+            .update(mapOf(
+                "pendapatan" to pendapatan,
+                "aset" to pendapatan,
+                "pokok" to 0,
+                "fleksibel" to 0,
+                "investasi" to 0,
+                "aset_pokok" to 0,
+                "aset_fleksibel" to 0,
+                "aset_investasi" to 0
+            ))
             .addOnSuccessListener {
-                println("successfully update. $it")
+                println("Successfully updated. $it")
             }
             .addOnFailureListener {
-                println("update failed. $it")
+                println("Update failed. $it")
             }
     }
 

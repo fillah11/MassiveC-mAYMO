@@ -12,6 +12,6 @@
         android:icon="@drawable/grafik"/>
     <item android:title="Profil"
         android:id="@+id/profil"
-        android:icon="@drawable/profile"/>
+        android:icon="@drawable/profil"/>
 
 </menu>
