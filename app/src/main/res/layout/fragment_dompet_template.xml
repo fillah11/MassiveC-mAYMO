@@ -1,230 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".one.DompetTemplateFragment"
+    android:id="@+id/user2"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".one.DompetTemplateFragment">
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="22dp"
+    android:background="@drawable/dompet_bar"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/user2"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dompet"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Aset Bersih"
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_aset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:src="@drawable/bar" />
+
+    <TextView
+        android:id="@+id/tv_pendapatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="8dp"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"/>
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="25dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:text="Kategori"/>
+
+    <LinearLayout
+        android:id="@+id/user3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/dompet_bar"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:drawableEnd="@drawable/pensil"
-            android:paddingEnd="20dp"
-            android:text="Dompet"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:paddingEnd="20dp"
-            android:text="Aset Bersih"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/tv_aset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:paddingEnd="20dp"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:src="@drawable/bar" />
-
-        <TextView
-            android:id="@+id/tv_pendapatan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:paddingEnd="20dp"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:id="@+id/user3"
+        <RelativeLayout
+            android:id="@+id/LLDAnaPokok"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginBottom="25dp"
-            android:background="@drawable/dompet_bar"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <RelativeLayout
-                android:id="@+id/LLDAnaPokok"
+            <ImageView
+                android:id="@+id/img_danapokok"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="12dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/pokok" />
+
+            <TextView
+                android:id="@+id/tv_danapokok"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingVertical="10dp"
-                android:paddingEnd="32dp">
+                android:layout_alignParentStart="@+id/img_danapokok"
+                android:layout_toEndOf="@+id/img_danapokok"
+                android:text="Dana Pokok"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-                <ImageView
-                    android:id="@+id/img_danapokok"
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/pokok" />
-
-                <TextView
-                    android:id="@+id/tv_danapokok"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="@+id/img_danapokok"
-                    android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@+id/img_danapokok"
-                    android:text="Dana Pokok"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_ketdanapokok"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_danapokok"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_toEndOf="@+id/img_danapokok"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:src="@drawable/progress"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_toEndOf="@+id/img_danapokok"
-                    android:layout_below="@+id/tv_ketdanapokok"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/LLDanaFleksibel"
+            <TextView
+                android:id="@+id/tv_ketdanapokok"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingVertical="10dp"
-                android:paddingEnd="32dp">
+                android:layout_below="@+id/tv_danapokok"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/img_danapokok"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
 
-                <ImageView
-                    android:id="@+id/img_danafleksibel"
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/fleksibel" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/progress"
+                android:layout_marginTop="6dp"
+                android:layout_toEndOf="@+id/img_danapokok"
+                android:layout_below="@+id/tv_ketdanapokok"/>
 
-                <TextView
-                    android:id="@+id/tv_danafleksibel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="@+id/img_danafleksibel"
-                    android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@+id/img_danafleksibel"
-                    android:text="Dana Fleksibel"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+        </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/tv_ketdanafleksibel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_danafleksibel"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_toEndOf="@+id/img_danafleksibel"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
+        <RelativeLayout
+            android:id="@+id/LLDanaFleksibel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:src="@drawable/progress"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_toEndOf="@+id/img_danafleksibel"
-                    android:layout_below="@+id/tv_ketdanafleksibel"/>
+            <ImageView
+                android:id="@+id/img_danafleksibel"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="12dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/fleksibel" />
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/LLDanaInvestasi"
+            <TextView
+                android:id="@+id/tv_danafleksibel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingVertical="10dp"
-                android:paddingEnd="32dp">
+                android:layout_alignParentStart="@+id/img_danafleksibel"
+                android:layout_toEndOf="@+id/img_danafleksibel"
+                android:text="Dana Fleksibel"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-                <ImageView
-                    android:id="@+id/img_danainvestasi"
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/invest" />
+            <TextView
+                android:id="@+id/tv_ketdanafleksibel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_danafleksibel"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/img_danafleksibel"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/tv_danainvestasi"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="@+id/img_danainvestasi"
-                    android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@+id/img_danainvestasi"
-                    android:text="Dana Investasi"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/progress"
+                android:layout_marginTop="6dp"
+                android:layout_toEndOf="@+id/img_danafleksibel"
+                android:layout_below="@+id/tv_ketdanafleksibel"/>
 
-                <TextView
-                    android:id="@+id/tv_ketdanainvestasi"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_danainvestasi"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_toEndOf="@+id/img_danainvestasi"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
+        </RelativeLayout>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:src="@drawable/progress"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_toEndOf="@+id/img_danainvestasi"
-                    android:layout_below="@+id/tv_ketdanainvestasi"/>
+        <RelativeLayout
+            android:id="@+id/LLDanaInvestasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="28dp">
 
-            </RelativeLayout>
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/img_danainvestasi"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="12dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/invest" />
 
+            <TextView
+                android:id="@+id/tv_danainvestasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="@+id/img_danainvestasi"
+                android:layout_toEndOf="@+id/img_danainvestasi"
+                android:text="Dana Investasi"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ketdanainvestasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_danainvestasi"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/img_danainvestasi"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/progress"
+                android:layout_marginTop="6dp"
+                android:layout_toEndOf="@+id/img_danainvestasi"
+                android:layout_below="@+id/tv_ketdanainvestasi"/>
+
+        </RelativeLayout>
     </LinearLayout>
-</RelativeLayout>
+
+</LinearLayout>

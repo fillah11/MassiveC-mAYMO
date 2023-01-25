@@ -45,9 +45,9 @@ class DompetTemplateFragment : Fragment() {
                 val fleksibel = functions.formatRupiah(it.data?.get("fleksibel").toString().toDouble())
                 val investasi = functions.formatRupiah(it.data?.get("investasi").toString().toDouble())
 
-                val ketPokok = "$asetPokok terpakai dari $pokok"
-                val ketFleksibel = "$asetFleksibel terpakai dari $fleksibel"
-                val ketInvestasi = "$asetInvestasi terpakai dari $investasi"
+                val ketPokok = "$asetPokok dari $pokok"
+                val ketFleksibel = "$asetFleksibel dari $fleksibel"
+                val ketInvestasi = "$asetInvestasi dari $investasi"
 
                 binding.tvAset.text = aset
                 binding.tvPendapatan.text = pendapatan

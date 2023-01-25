@@ -39,6 +39,7 @@
             android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/tv_rule50"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -49,6 +50,7 @@
             android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/tv_rule30"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -59,6 +61,7 @@
             android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/tv_rule20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

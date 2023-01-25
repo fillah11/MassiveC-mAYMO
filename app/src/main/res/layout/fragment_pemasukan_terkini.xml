@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".one.FragmentPemasukanTerkini"
+    android:paddingVertical="12dp"
+    android:paddingHorizontal="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/dompet_bar"
+    android:backgroundTint="#80E59C41"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/pemasukan"
+        android:textStyle="bold"
+        android:textSize="11sp"
+        android:textAllCaps="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/black"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pemasukan"
+        tools:listitem="@layout/list_pemasukan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="4"
+        android:layout_marginBottom="-4dp"/>
+
+</LinearLayout>
