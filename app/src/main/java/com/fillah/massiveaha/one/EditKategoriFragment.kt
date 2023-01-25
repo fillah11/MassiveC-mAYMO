@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
+import com.fillah.massiveaha.Functions
 import com.fillah.massiveaha.R
 import com.fillah.massiveaha.databinding.FragmentEditKategoriBinding
 import kotlinx.android.synthetic.main.list_kategori_pengeluaran.*
@@ -150,6 +151,27 @@ class EditKategoriFragment : Fragment(), IconClickListener {
         R.drawable.pendidikan_v4
     )
 
+    private val iconBonus = listOf(
+        R.drawable.bonus,
+        R.drawable.bonus_v2,
+        R.drawable.bonus_v3,
+        R.drawable.bonus_v4
+    )
+
+    private val iconGaji = listOf(
+        R.drawable.gaji,
+        R.drawable.gaji_v2,
+        R.drawable.gaji_v3,
+        R.drawable.gaji_v4
+    )
+
+    private val iconInvestasi = listOf(
+        R.drawable.investasi,
+        R.drawable.investasi_v2,
+        R.drawable.investasi_v3,
+        R.drawable.investasi_v4
+    )
+
     private val icons = mapOf(
         "Makan" to iconMakan,
         "Jajan" to iconJajan,
@@ -169,7 +191,11 @@ class EditKategoriFragment : Fragment(), IconClickListener {
         "Transportasi" to iconTransportasi,
         "Lalu Lintas" to iconLaluLintas,
         "Pendidikan" to iconPendidikan,
+        "Bonus" to iconBonus,
+        "Gaji" to iconGaji,
+        "Investasi" to iconInvestasi
     )
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -193,10 +219,15 @@ class EditKategoriFragment : Fragment(), IconClickListener {
             this.layoutManager = GridLayoutManager(this.context, 4, )
         }
 
+        binding.btnBack.setOnClickListener{
+            parentFragmentManager.popBackStack()
+        }
+
         return binding.root
     }
 
     override fun onItemClicked(img: Int, view: View) {
+        binding.btnCheck.visibility = View.VISIBLE
         view.alpha = 0.4f
     }
 

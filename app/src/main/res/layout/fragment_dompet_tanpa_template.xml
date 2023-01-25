@@ -1,68 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user2"
+    tools:context=".one.DompetTanpaTemplateFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".one.DompetTanpaTemplateFragment">
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="22dp"
+    android:background="@drawable/dompet_bar"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/user2"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/dompet_bar"
-        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dompet"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:drawableEnd="@drawable/pensil"
-            android:paddingEnd="20dp"
-            android:text="Dompet"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Aset Bersih"
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:paddingEnd="20dp"
-            android:text="Aset Bersih"
-            android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/tv_aset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_aset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:paddingEnd="20dp"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:src="@drawable/bar" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:src="@drawable/bar" />
-
-        <TextView
-            android:id="@+id/tv_pendapatan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:paddingEnd="20dp"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-</RelativeLayout>
+    <TextView
+        android:id="@+id/tv_pendapatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</LinearLayout>

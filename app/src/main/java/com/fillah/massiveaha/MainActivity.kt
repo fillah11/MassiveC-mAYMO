@@ -6,14 +6,19 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.fillah.massiveaha.fragment.HomeFragment
 import com.fillah.massiveaha.fragment.GrafikFragment
+import com.fillah.massiveaha.fragment.KalenderFragment
 import com.fillah.massiveaha.fragment.ProfilFragment
 import com.fillah.massiveaha.one.LoginAct
 import com.fillah.massiveaha.one.WelcomeAct
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.*
+import java.util.logging.SimpleFormatter
 
 class MainActivity : AppCompatActivity() {
     private val homeFragment = HomeFragment()
-//    private val kalenderFragment = KalenderFragment()
+    private val kalenderFragment = KalenderFragment()
     private val grafikFragment = GrafikFragment()
     private val profileFragment = ProfilFragment()
     private val functions = Functions()
@@ -30,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         bottomNav.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.home -> replaceFragment(homeFragment)
-//                R.id.kalender -> replaceFragment(kalenderFragment)
+                R.id.kalender -> replaceFragment(kalenderFragment)
                 R.id.grafik -> replaceFragment(grafikFragment)
                 R.id.profil -> replaceFragment(profileFragment)
             }

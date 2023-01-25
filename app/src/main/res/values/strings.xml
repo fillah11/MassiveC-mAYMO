@@ -12,9 +12,9 @@
     <string name="tv_other_login">Atau login dengan</string>
     <string name="tv_tips_header">Tips mengelola keuangan!</string>
     <string name="tv_tips">Berdasarkan penghasilan anda, anda harus mengaplikasikan 50:30:20 rule.</string>
-    <string name="tv_tips_1">50% <b>(RpXX.XXX,00)</b> digunakan untuk membayar tagihan bulanan dan kebutuhan pokok. Misalnya seperti listrik, belanja bulanan, cicilan, serta biaya transportasi.</string>
-    <string name="tv_tips_2">30% <b>(RpXX.XXX,00)</b> sebagai dana fleksibel. Sehingga barang yang anda inginkan tetapi tidak esensial dapat dibeli dengan budget ini. Contohnya Anda bisa menggunakan dana fleksibel untuk membeli baju, menonton bioskop, atau bepergian.</string>
-    <string name="tv_tips_3">20% <b>(RpXX.XXX,00)</b> dialokasikan untuk mencapai tujuan finansial Anda yaitu investasi, tabungan, dan asuransi. Sehingga Anda memiliki dana yang dapat dipakai saata keadaan terdesak atau memenuhi impian Anda.</string>
+    <string name="tv_tips_1">50% <b>(50XX)</b> digunakan untuk membayar tagihan bulanan dan kebutuhan pokok. Misalnya seperti listrik, belanja bulanan, cicilan, serta biaya transportasi.</string>
+    <string name="tv_tips_2">30% <b>(30XX)</b> sebagai dana fleksibel. Sehingga barang yang anda inginkan tetapi tidak esensial dapat dibeli dengan budget ini. Contohnya Anda bisa menggunakan dana fleksibel untuk membeli baju, menonton bioskop, atau bepergian.</string>
+    <string name="tv_tips_3">20% <b>(20XX)</b> dialokasikan untuk mencapai tujuan finansial Anda yaitu investasi, tabungan, dan asuransi. Sehingga Anda memiliki dana yang dapat dipakai saata keadaan terdesak atau memenuhi impian Anda.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_greetings">Selamat pagi!</string>
@@ -36,4 +36,9 @@
     <string name="pengeluaran">Pengeluaran</string>
     <string name="pemasukan">Pemasukan</string>
     <string name="pilih_icon">Pilih Icon</string>
+    <string name="kategori">Kategori</string>
+    <string name="profil">Profil</string>
+    <string name="belanja">Belanja</string>
+    <string name="input_transaksi">Masukkan nominal transaksi</string>
+    <string name="dalam_pengembangan">Dalam Pengembangan</string>
 </resources>

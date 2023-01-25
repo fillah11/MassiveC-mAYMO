@@ -166,7 +166,14 @@ class DaftarAct : AppCompatActivity() {
             "username" to username,
             "intro" to true,
             "template" to false,
-            "aset" to 0
+            "aset" to 0,
+            "pendapatan" to 0,
+            "pokok" to 0,
+            "aset_pokok" to 0,
+            "fleksibel" to 0,
+            "aset_fleksibel" to 0,
+            "investasi" to 0,
+            "aset_investasi" to 0
         )
 
         //add data to db

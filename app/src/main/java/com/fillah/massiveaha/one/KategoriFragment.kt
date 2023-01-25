@@ -58,6 +58,10 @@ class KategoriFragment : Fragment() {
             }
         }
 
+        binding.btnBack.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+
         return binding.root
     }
 

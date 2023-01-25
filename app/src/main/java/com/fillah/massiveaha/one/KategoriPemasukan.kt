@@ -51,7 +51,7 @@ class KategoriPemasukan : Fragment(), KategoriClickListener {
         return binding.root
     }
 
-    override fun onItemClicked(icon: Int, category: String) {
+    override fun onItemClicked(icon: Int, category: String, jenis: String?) {
 
         val bundle = Bundle()
         bundle.putString("kategori", category)

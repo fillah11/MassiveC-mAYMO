@@ -1,9 +1,11 @@
 package com.fillah.massiveaha
 
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.text.NumberFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 class Functions {
@@ -12,6 +14,11 @@ class Functions {
     private val auth = FirebaseAuth.getInstance()
     private val currentUser = auth.currentUser
     val userData = firestore.collection("users").document(currentUser?.email.toString())
+    private val formatter = SimpleDateFormat("EEEE, dd MMMM yyyy", Locale("id","ID"))
+    val currentDate: String = formatter.format(Date())
+    val userCurrentTransaction = userData.collection("transaksi").document(currentDate)
+    val currentExpense = userCurrentTransaction.collection("pengeluaran")
+    val currentIncome = userCurrentTransaction.collection("pemasukan")
 
     fun isLoggedIn(): Boolean {
         return currentUser != null
@@ -36,6 +43,85 @@ class Functions {
             }
             .addOnFailureListener {
                 println("user has not finished intro. $it")
+            }
+    }
+
+    fun updateAddIncome(nominal: Int){
+        userData.get()
+            .addOnSuccessListener {
+                val template = it.data?.get("template").toString().toBoolean()
+                var aset: Int = it.data?.get("aset").toString().toInt()
+                var pendapatan: Int = it.data?.get("pendapatan").toString().toInt()
+                var asetFleksibel: Int = it.data?.get("aset_fleksibel").toString().toInt()
+                var asetPokok: Int = it.data?.get("aset_pokok").toString().toInt()
+                var asetInvestasi: Int = it.data?.get("aset_investasi").toString().toInt()
+
+                if(template){
+                    aset+= nominal
+                    val updatedPendapatan = pendapatan + nominal
+                    val pokok = updatedPendapatan /2
+                    val fleksibel = updatedPendapatan * 3/10
+                    val investasi = updatedPendapatan /5
+
+                    val updatedAsetPokok = asetPokok + (nominal /2)
+                    val updatedAsetFleksibel = asetFleksibel + (nominal * 3/10)
+                    val updatedAsetInvestasi = asetInvestasi + (nominal /5)
+
+                    userData.update(mapOf(
+                        "aset" to aset,
+                        "pendapatan" to updatedPendapatan,
+                        "pokok" to pokok,
+                        "fleksibel" to fleksibel,
+                        "investasi" to investasi,
+                        "aset_pokok" to updatedAsetPokok,
+                        "aset_fleksibel" to updatedAsetFleksibel,
+                        "aset_investasi" to updatedAsetInvestasi
+                    ))
+                }else{
+                    aset+= nominal
+                    userData.update("aset", aset)
+                }
+            }
+            .addOnFailureListener {
+                Log.e("Failed to get data", it.message.toString())
+            }
+    }
+
+    fun updateAddExpense(jenis: String, nominal:Int){
+        userData.get()
+            .addOnSuccessListener {
+                val template = it.data?.get("template").toString().toBoolean()
+                var aset: Int = it.data?.get("aset").toString().toInt()
+                var asetFleksibel: Int = it.data?.get("aset_fleksibel").toString().toInt()
+                var asetPokok: Int = it.data?.get("aset_pokok").toString().toInt()
+                println("before, aset = $aset, fleksibel= $asetFleksibel, pokok=$asetPokok")
+
+                if(template){
+                    if (jenis == "aset_pokok"){
+                        aset -= nominal
+                        asetPokok -= nominal
+                        userData.update(mapOf(
+                            "aset" to aset,
+                            "aset_pokok" to asetPokok
+                        ))
+                    } else{
+                        aset -= nominal
+                        asetFleksibel -= nominal
+                        userData.update(mapOf(
+                            "aset" to aset,
+                            "aset_fleksibel" to asetFleksibel
+                        ))
+                    }
+                }else{
+                    aset -= nominal
+                    userData.update("aset", aset)
+                }
+
+
+                println("after, aset = $aset, fleksibel= $asetFleksibel, pokok=$asetPokok")
+            }
+            .addOnFailureListener {
+                Log.e("Failed to get data", it.message.toString())
             }
     }
 
@@ -96,5 +182,6 @@ class Functions {
     fun logout(){
         auth.signOut()
     }
+
 
 }
